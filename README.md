@@ -1,138 +1,92 @@
-# Profile-Terminal
+# ⚡ profile terminal
 
-![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-00ADD8?style=for-the-badge)
-![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![CodeQL](https://img.shields.io/badge/CodeQL-Security-00ADD8?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-v2.0.0-00ADD8?style=for-the-badge)
+![Go](https://img.shields.io/badge/Go-1.21%2B-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Version](https://img.shields.io/badge/Version-v2.0.0-00ADD8?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)
 
-> Turn your GitHub profile into an interactive ASCII terminal with dynamic SVG
+> Transform tool by [AetherCodeHQ](https://github.com/AetherCodeHQ)
 
-`github-profile` `terminal` `svg` `interactive` `serverless` `developer-tools` `golang`
-
----
-
-## What is it?
-
-**Profile-Terminal** is Replace your static GitHub profile with a living terminal. Visitors type commands, view stats, explore projects - all rendered as dynamic SVG.
-
-## Why should you care?
-
-- **Fast** - Compiled Go binary, zero overhead
-- **Secure** - CodeQL analysis + Dependabot
-- **Offline-first** - Works without internet
-- **Lightweight** - Single binary deployment
-- **Developer-friendly** - Clean CLI with docs
+`transform` `data-processing` `cli` `golang`
 
 ---
+
+## What is profile-terminal?
+
+**profile-terminal** is a data transformation tool that converts, formats, and processes files between different formats.
 
 ## Features
 
-- Interactive terminal UI in README
-- Dynamic SVG rendering
-- Command processing (help, skills, projects)
-- Real-time GitHub stats
-- Visitor counter
-- Animated typing effect
-- Color themes (matrix, cyberpunk, retro)
-- Serverless backend (Cloudflare Workers)
-- Custom command aliases
-- Easter eggs
+- ✅ `svgBox()` — Svgbox
+- ✅ `esc()` — Esc
+- ✅ CLI flags and options
+- 🚀 **Zero dependencies** — only Go standard library
+- 📦 **Single binary** — compile and run anywhere
+- 🔄 **Offline capable** — no internet required
 
----
+## Installation
 
-## Quick Start
-
-### Prerequisites
-- Go 1.21 or higher
-
-### Install from source
 ```bash
+# Clone
 git clone https://github.com/AetherCodeHQ/profile-terminal.git
 cd profile-terminal
+
+# Build
 go build -o profile-terminal .
+
+# Run
+./profile-terminal -out -s
 ```
 
-### Run
+### Or directly with `go run`:
 ```bash
-./profile-terminal --help
+go run main.go -out -s
 ```
-
----
 
 ## Usage
 
-./termctl generate --theme matrix --commands help,skills,projects  OR  ./termctl deploy --provider cloudflare
-
----
-
-## CLI Flags
-
-| Flag | Description | Default |
-|------|-------------|---------|
-| `--path` | Target directory | `.` |
-| `--format` | Output format (json, text) | `text` |
-| `--output` | Output filename | `stdout` |
-| `--verbose` | Enable verbose output | `false` |
-
----
-
-## Development
-
 ```bash
-git clone https://github.com/AetherCodeHQ/profile-terminal.git
-cd profile-terminal
-go build -o profile-terminal .
-go test ./...
-golangci-lint run
+# Basic usage
+./profile-terminal -out -s
+
+# With flags
+./profile-terminal -out value -out -s
+./profile-terminal -s value -out -s
 ```
 
----
+### Example Output
+
+```
+$ ./profile-terminal -out -s
+wrote %s (%d lines)\n
+```
+
+## Project Structure
+
+```
+profile-terminal/
+  main.go          # Entry point (40 lines)
+  go.mod            # Go module definition
+  go.sum            # Dependency checksums
+  README.md         # This file
+  LICENSE           # MIT License
+  CHANGELOG.md      # Version history
+```
 
 ## Contributing
 
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-## Security
-
-Report to: aethercode.core@gmail.com | See [SECURITY.md](SECURITY.md)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-MIT License - see [LICENSE](LICENSE)
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-<p align="center">
-  Built with love by <a href="https://github.com/AetherCodeHQ">AetherCode</a> | <a href="https://github.com/AetherCode-Core">AetherCode Core</a>
-</p>
-
-
----
-
-## What's New in v1.1.0
-
-- Professional documentation with badges
-- CI/CD pipeline with GitHub Actions
-- Security analysis with CodeQL
-- Dependency management with Dependabot
-- Code quality with GolangCI-Lint
-- Issue and PR templates
-- Contributing guidelines
-
-## Categories
-
-| Category | Description |
-|----------|-------------|
-| Other | This project is part of the AetherCode ecosystem |
-
-## Related Projects
-
-Part of [AetherCode Core](https://github.com/AetherCode-Core) ecosystem.
-
-
-## What's new in v2.0.0
-
-- Clean CLI with subcommands
-- Robust error handling
-- Fast, standard-library-only implementation
+Built with ❤️ by [AetherCodeHQ](https://github.com/AetherCodeHQ)
